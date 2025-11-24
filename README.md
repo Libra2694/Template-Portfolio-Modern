@@ -14,27 +14,6 @@
 
 ![Preview Portfolio](./assets/images/preview.png)
 
-*Tampilan utama portfolio - Design modern dan profesional*
-
-</div>
-
-## 🌟 Preview
-
-<div align="center">
-
-### 📱 Tampilan Website Portfolio
-
-![Home Section](./assets/images/portfolio.png)
-*Section Home - Perkenalan profesional dengan design modern*
-
-![Projects Section](./assets/images/project.png)
-*Section Projects - Gallery karya dengan tampilan menarik*
-
-![Profile](./assets/images/profile.jpg)
-*Foto profil yang dapat disesuaikan*
-
-</div>
-
 ## ✨ Fitur Unggulan
 
 ### 🎯 Design & UX
@@ -224,4 +203,5 @@ Distributed under MIT License. Lihat file `LICENSE` untuk informasi lebih lanjut
 Jika ingin menggunakan link external untuk gambar, bisa ganti dengan:
 ```markdown
 ![Preview Portfolio](https://via.placeholder.com/800x400/2c3e50/ffffff?text=Portfolio+Preview)
+
 ```
