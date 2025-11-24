@@ -160,10 +160,11 @@ Ingin berkontribusi? Silakan!
 ## 📞 Support
 
 **Butuh bantuan?** 
-- 📧 Email: libraproject26@gmail.com
-- 📱 WhatsApp: +84 56 318 5476
-- 🐛 [Create Issue](https://github.com/Libra2694/Template-Portfolio-Modern/issues)
-- 💬 Diskusi via GitHub Discussions
+
+[![Email](https://img.shields.io/badge/Email-libraproject26%40gmail.com-blue?logo=gmail&logoColor=white)](mailto:libraproject26@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-green?logo=whatsapp&logoColor=white)](https://wa.me/84563185476)
+[![Create Issue](https://img.shields.io/badge/GitHub-Create%20Issue-orange?logo=github&logoColor=white)](https://github.com/Libra2694/Template-Portfolio-Modern/issues)
+[![Discussions](https://img.shields.io/badge/GitHub-Discussions-informational?logo=github&logoColor=white)](https://github.com/Libra2694/Template-Portfolio-Modern/discussions)
 
 ## 📄 License
 
