@@ -198,15 +198,3 @@ Distributed under MIT License. Lihat file `LICENSE` untuk informasi lebih lanjut
 </div>
 
 ---
-
-**Catatan**: Untuk gambar preview di README.md, pastikan:
-1. File `assets/images/portfolio.png` sudah ada di repository
-2. Gambar memiliki ukuran yang sesuai (rekomendasi: 800x400px)
-3. Format gambar PNG atau JPG untuk kualitas terbaik
-
-Jika ingin menggunakan link external untuk gambar, bisa ganti dengan:
-```markdown
-![Preview Portfolio](https://via.placeholder.com/800x400/2c3e50/ffffff?text=Portfolio+Preview)
-```
-
-
