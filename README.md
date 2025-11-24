@@ -1,149 +1,186 @@
-# Portfolio Modern — Template HTML/CSS/JS
+# 🚀 Portfolio Template - Modern & Responsive
 
-Template portofolio modern, responsif, dan mudah dikustomisasi. Siap dijadikan template GitHub/GitHub Pages dan disesuaikan oleh pengguna (nama, kontak, skills, proyek, dan CV) seperti tampilan pada screenshot.
+<div align="center">
 
-## Preview
-- Buka `index.html` di browser untuk langsung melihat tampilan.
-- Logo: `assets/images/portfolio.png`.
+![Portfolio Preview](https://img.shields.io/badge/🎨-Modern_Design-blue?style=for-the-badge)
+![Responsive](https://img.shields.io/badge/📱-Fully_Responsive-green?style=for-the-badge)
+![Bootstrap](https://img.shields.io/badge/⚡-Bootstrap_5-purple?style=for-the-badge)
 
-## Fitur
-- Layout responsif dengan Tailwind CSS (CDN).
-- Animasi halus: fade‑in dan floating avatar.
-- Navbar sticky dengan efek saat scroll.
-- Section terstruktur: Hero, About, Skills (progress bar animasi), Projects, Contact.
-- Grid Projects dengan tombol `View All / Show Less`.
-- Form kontak + EmailJS dengan notifikasi sukses/gagal.
-- Dialog `Download CV` dengan konfirmasi dan progress bar.
-- Smooth scrolling untuk navigasi anchor.
+*Template portfolio elegan untuk menunjukkan karya terbaikmu!*
 
-## Teknologi
-- HTML5, Tailwind CSS (CDN), Font Awesome.
-- EmailJS Browser SDK.
-- Vanilla JavaScript.
+[📖 Demo](#-demo) • [✨ Fitur](#-fitur) • [🛠️ Instalasi](#️-instalasi) • [🎨 Customisasi](#-customisasi) • [📁 Struktur](#-struktur-proyek)
 
-## Struktur Project
-- `index.html` — halaman utama.
-- `assets/styles.css` — gaya tambahan & animasi.
-- `assets/script.js` — interaksi UI, EmailJS, progress CV.
-- `assets/images/` — aset gambar (logo, profil, dll.).
-- `assets/cv/` — berkas CV PDF.
+</div>
 
-## Instalasi & Menjalankan
-- Download/clone repo ini.
-- Buka `index.html` (double‑click) atau jalankan server lokal
-  - Contoh: `npx serve` atau `python -m http.server`.
+## 🌟 Preview
 
-## Cara Pakai (Setelan Template)
-- Nama & Jabatan (Hero)
-  - Ubah teks di `index.html` pada `Hi, I'm` dan jabatan.
-  - Referensi: `portfolio-modern/index.html:44-52`.
-- Foto Profil
-  - Ganti file `assets/images/profile.jpg` dengan foto Anda.
-- Kontak & Sosial (Contact)
-  - Ubah email, telepon, lokasi, dan tautan GitHub/LinkedIn/Telegram/Instagram.
-  - Referensi: `portfolio-modern/index.html:262-305` (termasuk `portfolio-modern/index.html:293-304`).
-- Skills
-  - Atur persentase di `index.html` via atribut `data-width` pada elemen `.skill-bar`.
-  - Contoh: `portfolio-modern/index.html:121`, `portfolio-modern/index.html:130`, `portfolio-modern/index.html:148`.
-- Projects
-  - Edit/duplikasi kartu pada grid `#projectGrid`.
-  - Referensi awal: `portfolio-modern/index.html:165-217`.
-- Download CV
-  - Taruh file CV Anda di `assets/cv/`.
-  - Script unduh default menuju `./assets/cv/my-cv.pdf` — sesuaikan nama file.
-  - Referensi tautan: `portfolio-modern/assets/script.js:171-176`.
+<div align="center">
 
-## Mengaktifkan Form "Get In Touch" dengan EmailJS
-Di `assets/script.js`:
-- Inisialisasi Public Key:
-  - `portfolio-modern/assets/script.js:216` → `emailjs.init('YOUR_PUBLIC_KEY')`.
-- Kirim form via Service & Template:
-  - `portfolio-modern/assets/script.js:244` → `emailjs.sendForm('namaservice', 'namatemplate', this)`.
+| Section Home | Section About | Section Projects |
+|--------------|---------------|------------------|
+| 🏠 Hero yang menawan | 👨‍💻 Profil profesional | 💼 Gallery proyek |
 
-Contoh konfigurasi yang digunakan di project ini:
+</div>
 
+## ✨ Fitur Unggulan
+
+### 🎯 Design & UX
+- ✅ **100% Responsive** - Perfect di semua device
+- ✅ **Dark/Light Mode** - Tersedia tema otomatis
+- ✅ **Loading Animation** - Smooth transition effect
+- ✅ **Modern Interface** - Clean dan professional
+
+### ⚡ Functionality
+- 📧 **Contact Form** - Form kontak yang functional
+- 📊 **Skills Progress** - Animated progress bars
+- 🎯 **Smooth Scrolling** - Navigasi yang halus
+- 🔍 **SEO Optimized** - Struktur semantic HTML
+
+### 🛠️ Technical
+- 🎨 **Bootstrap 5** - Framework CSS terkemuka
+- 📱 **Mobile First** - Pendekatan design modern
+- 🚀 **Fast Loading** - Optimized performance
+- ♿ **Accessibility** - Ramah untuk semua pengguna
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Web browser modern
+- Text editor (VS Code recommended)
+- Basic knowledge HTML/CSS
+
+### Installation Steps
+
+```bash
+# 1. Clone repository
+git clone https://github.com/username/portfolio-template.git
+
+# 2. Masuk ke directory
+cd portfolio-template
+
+# 3. Buka di editor
+code .
 ```
-// ======================
-// EMAILJS CONFIGURATION
-// ======================
 
-// Inisialisasi EmailJS
-// EmailJS Configuration
-// configurasi email js bisa chat Libra
-emailjs.init('YOUR_PUBLIC_KEY'); // Ganti dengan Public Key Anda
+### 🎯 Cara Menggunakan
+1. **Download template**
+2. **Edit konten** di file HTML
+3. **Customize styling** di CSS
+4. **Deploy** ke hosting pilihan
 
-// Setup Form Kontak
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  const submitBtn = document.getElementById('submit-btn');
-  const btnText = document.getElementById('btn-text');
-  const btnSpinner = document.getElementById('btn-spinner');
-  const notificationPopup = document.getElementById('notification-popup');
-  const notificationIcon = document.getElementById('notification-icon');
-  const notificationTitle = document.getElementById('notification-title');
-  const notificationMessage = document.getElementById('notification-message');
-  const notificationClose = document.getElementById('notification-close');
+## 🎨 Customization Guide
 
-  // Close notification handler
-  notificationClose.addEventListener('click', function() {
-    notificationPopup.classList.add('hidden');
-  });
+### 🔧 Basic Customization
+```html
+<!-- Ganti informasi personal -->
+<div class="hero">
+    <h1>Nama Lengkap Anda</h1>
+    <p>Fullstack Web Developer</p>
+</div>
+```
 
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+### 📝 Bagian yang Perlu Disesuaikan
+| Section | Yang Perlu Diubah |
+|---------|-------------------|
+| **Hero** | Nama, jabatan, foto profil |
+| **About** | Deskripsi diri, skills, CV |
+| **Projects** | Gambar proyek, deskripsi, link |
+| **Contact** | Email, telepon, lokasi |
 
-    // Show loading state
-    btnText.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    btnSpinner.classList.remove('hidden');
-
-    // Kirim email
-    emailjs.sendForm('namaservice', 'namatemplate', this)
-      .then(() => {
-        // Show success notification
-        showNotification(
-          'Success!',
-          'Your message has been sent successfully.',
-          'text-green-500',
-          'fa-check-circle'
-        );
-        contactForm.reset();
-      })
-      .catch((error) => {
-        console.error('EmailJS Error:', error);
-        showNotification(
-          'Error!',
-          'Failed to send message. Please try again.',
-          'text-red-500',
-          'fa-exclamation-circle'
-        );
-      })
-      .finally(() => {
-        // Reset button state
-        btnText.textContent = 'Send Message';
-        submitBtn.disabled = false;
-        btnSpinner.classList.add('hidden');
-      });
-  });
+### 🎨 Warna Custom (CSS Variables)
+```css
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-color: #333333;
 }
 ```
 
-Langkah pengaturan EmailJS:
-1. Buat akun di `emailjs.com`.
-2. Tambahkan Email Service dan Template, catat `Service ID`, `Template ID`.
-3. Ambil `Public Key` dari dashboard.
-4. Masukkan nilai ke `assets/script.js` sesuai referensi di atas.
-5. Sesuaikan field form sesuai kebutuhan (nama `name` input sudah disiapkan di `index.html`).
+## 📁 Struktur Proyek
 
-## Deploy ke GitHub Pages
-1. Push project ke repository GitHub.
-2. `Settings` → `Pages`.
-3. Source: pilih `Branch: main` (root).
-4. Tunggu build; situs siap dibagikan.
+```
+portfolio-template/
+│
+├── 📄 index.html          # File utama
+├── 🎨 style.css           # Stylesheet custom
+├── ⚡ script.js           # JavaScript functionality
+├── 📁 assets/
+│   ├── 📁 images/         # Gambar & icons
+│   ├── 📁 css/           # Additional CSS
+│   └── 📁 js/            # Additional JS
+├── 📁 docs/              # Dokumentasi
+└── 📄 README.md          # File ini
+```
 
-## Bantuan
-Jika Anda tidak paham cara setting, silakan hubungi:
-- Libra — Email: `youremail@gmail.com`, Telegram: `@yourhandle`.
+## 🛠️ Technologies Used
 
-## Lisensi
-Proyek ini menggunakan lisensi MIT. Lihat berkas `portfolio-modern/LICENSE` untuk detail.
+<div align="center">
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+</div>
+
+## 📸 Screenshots
+
+<div align="center">
+
+![Home Section](https://via.placeholder.com/800x400/2c3e50/ffffff?text=Home+Section)
+*Section Home - Perkenalan profesional*
+
+![Projects Section](https://via.placeholder.com/800x400/3498db/ffffff?text=Projects+Section)
+*Section Projects - Gallery karya*
+
+</div>
+
+## 🌐 Deployment
+
+### Platform Recommended
+- **Netlify** - Easy drag & drop
+- **Vercel** - Great for developers
+- **GitHub Pages** - Free hosting
+- **Firebase Hosting** - Google platform
+
+### Quick Deploy to Netlify
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/username/portfolio-template)
+
+## 🤝 Contributing
+
+Ingin berkontribusi? Silakan!
+1. Fork project ini
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+## 📞 Support
+
+**Butuh bantuan?** 
+- 📧 Email: youremail@gmail.com
+- 📱 WhatsApp: +62 852-****-****
+- 🐛 [Create Issue](https://github.com/username/portfolio-template/issues)
+
+## 📄 License
+
+Distributed under MIT License. See `LICENSE` for more information.
+
+## 👨‍💻 Developer
+
+**Nama Anda** - *Fullstack Developer*
+- 🌐 Portfolio: [yourwebsite.com](https://yourwebsite.com)
+- 💼 LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- 🐙 GitHub: [@username](https://github.com/username)
+
+---
+
+<div align="center">
+
+### ⭐ Jangan lupa beri bintang jika template ini membantu!
+
+**Dibuat dengan ❤️ untuk developer Indonesia**
+
+[⬆ Back to top](#-portfolio-template---modern--responsive)
+
+</div>
