@@ -1,75 +1,149 @@
 # Portfolio Modern — Template HTML/CSS/JS
 
-Template portofolio modern, responsif, dan mudah dikustomisasi. Cocok untuk dipakai sebagai starter di GitHub atau GitHub Pages.
+Template portofolio modern, responsif, dan mudah dikustomisasi. Siap dijadikan template GitHub/GitHub Pages dan disesuaikan oleh pengguna (nama, kontak, skills, proyek, dan CV) seperti tampilan pada screenshot.
 
 ## Preview
-- Buka `index.html` langsung di browser untuk melihat tampilan.
-- Logo: `assets/images/portfolio.png`
+- Buka `index.html` di browser untuk langsung melihat tampilan.
+- Logo: `assets/images/portfolio.png`.
 
 ## Fitur
-- Layout responsif dengan Tailwind CSS (CDN)
-- Animasi halus: fade-in dan floating avatar
-- Navbar sticky dengan efek saat scroll
-- Section: Hero, About, Skills (progress bar animasi), Projects, Contact
-- Grid Projects dengan tombol `View All / Show Less`
-- Form kontak terintegrasi EmailJS + notifikasi cantik
-- Dialog `Download CV` dengan konfirmasi dan progress
-- Smooth scrolling untuk navigasi anchor
+- Layout responsif dengan Tailwind CSS (CDN).
+- Animasi halus: fade‑in dan floating avatar.
+- Navbar sticky dengan efek saat scroll.
+- Section terstruktur: Hero, About, Skills (progress bar animasi), Projects, Contact.
+- Grid Projects dengan tombol `View All / Show Less`.
+- Form kontak + EmailJS dengan notifikasi sukses/gagal.
+- Dialog `Download CV` dengan konfirmasi dan progress bar.
+- Smooth scrolling untuk navigasi anchor.
 
 ## Teknologi
-- HTML5
-- Tailwind CSS (via CDN)
-- Font Awesome Icons
-- EmailJS Browser SDK
-- Vanilla JavaScript
+- HTML5, Tailwind CSS (CDN), Font Awesome.
+- EmailJS Browser SDK.
+- Vanilla JavaScript.
 
 ## Struktur Project
-- `index.html` — halaman utama
-- `assets/styles.css` — gaya tambahan & animasi
-- `assets/script.js` — interaksi UI, EmailJS, progress CV
-- `assets/images/` — aset gambar (logo, profil, dll.)
-- `assets/cv/` — berkas CV PDF
+- `index.html` — halaman utama.
+- `assets/styles.css` — gaya tambahan & animasi.
+- `assets/script.js` — interaksi UI, EmailJS, progress CV.
+- `assets/images/` — aset gambar (logo, profil, dll.).
+- `assets/cv/` — berkas CV PDF.
 
 ## Instalasi & Menjalankan
-- Clone atau download repository ini
-- Buka `index.html` dengan double‑click atau jalankan server lokal
-  - Contoh: `npx serve` atau `python -m http.server` (opsional)
+- Download/clone repo ini.
+- Buka `index.html` (double‑click) atau jalankan server lokal
+  - Contoh: `npx serve` atau `python -m http.server`.
 
-## Kustomisasi Cepat
-- Nama & jabatan di `index.html` bagian Hero
-  - Ganti teks “Your Name” dan “Fullstack Web Developer”
-- Kontak di `index.html` bagian Contact
-  - Email, telepon, lokasi, dan tautan sosial (GitHub/LinkedIn/Telegram/Instagram)
-- Skills di `index.html` — ubah persentase melalui atribut `data-width`
-- Gambar profil di `assets/images/profile.jpg`
-- Projek di `index.html` — edit card di grid `#projectGrid`
+## Cara Pakai (Setelan Template)
+- Nama & Jabatan (Hero)
+  - Ubah teks di `index.html` pada `Hi, I'm` dan jabatan.
+  - Referensi: `portfolio-modern/index.html:44-52`.
+- Foto Profil
+  - Ganti file `assets/images/profile.jpg` dengan foto Anda.
+- Kontak & Sosial (Contact)
+  - Ubah email, telepon, lokasi, dan tautan GitHub/LinkedIn/Telegram/Instagram.
+  - Referensi: `portfolio-modern/index.html:262-305` (termasuk `portfolio-modern/index.html:293-304`).
+- Skills
+  - Atur persentase di `index.html` via atribut `data-width` pada elemen `.skill-bar`.
+  - Contoh: `portfolio-modern/index.html:121`, `portfolio-modern/index.html:130`, `portfolio-modern/index.html:148`.
+- Projects
+  - Edit/duplikasi kartu pada grid `#projectGrid`.
+  - Referensi awal: `portfolio-modern/index.html:165-217`.
+- Download CV
+  - Taruh file CV Anda di `assets/cv/`.
+  - Script unduh default menuju `./assets/cv/my-cv.pdf` — sesuaikan nama file.
+  - Referensi tautan: `portfolio-modern/assets/script.js:171-176`.
 
-## Konfigurasi EmailJS
+## Mengaktifkan Form "Get In Touch" dengan EmailJS
 Di `assets/script.js`:
-- Inisialisasi: `emailjs.init('YOUR_PUBLIC_KEY')` — ganti dengan Public Key EmailJS Anda
-  - Lokasi: `portfolio-modern/assets/script.js:216`
-- Kirim form: `emailjs.sendForm('namaservice', 'namatemplate', this)` — ganti `namaservice` dan `namatemplate`
-  - Lokasi: `portfolio-modern/assets/script.js:244`
-- Langkah umum:
-  1. Buat akun di emailjs.com
-  2. Tambah service + template, catat `Service ID`, `Template ID`, dan `Public Key`
-  3. Masukkan nilai tersebut ke dalam file `assets/script.js`
+- Inisialisasi Public Key:
+  - `portfolio-modern/assets/script.js:216` → `emailjs.init('YOUR_PUBLIC_KEY')`.
+- Kirim form via Service & Template:
+  - `portfolio-modern/assets/script.js:244` → `emailjs.sendForm('namaservice', 'namatemplate', this)`.
 
-## Download CV
-- File CV contoh: `assets/cv/masukincvpdfmu.pdf`
-- Script default mengarah ke `./assets/cv/my-cv.pdf` — sesuaikan atau ubah nama file
-  - Lokasi pengaturan tautan: `portfolio-modern/assets/script.js:171-176`
+Contoh konfigurasi yang digunakan di project ini:
+
+```
+// ======================
+// EMAILJS CONFIGURATION
+// ======================
+
+// Inisialisasi EmailJS
+// EmailJS Configuration
+// configurasi email js bisa chat Libra
+emailjs.init('YOUR_PUBLIC_KEY'); // Ganti dengan Public Key Anda
+
+// Setup Form Kontak
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  const submitBtn = document.getElementById('submit-btn');
+  const btnText = document.getElementById('btn-text');
+  const btnSpinner = document.getElementById('btn-spinner');
+  const notificationPopup = document.getElementById('notification-popup');
+  const notificationIcon = document.getElementById('notification-icon');
+  const notificationTitle = document.getElementById('notification-title');
+  const notificationMessage = document.getElementById('notification-message');
+  const notificationClose = document.getElementById('notification-close');
+
+  // Close notification handler
+  notificationClose.addEventListener('click', function() {
+    notificationPopup.classList.add('hidden');
+  });
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Show loading state
+    btnText.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    btnSpinner.classList.remove('hidden');
+
+    // Kirim email
+    emailjs.sendForm('namaservice', 'namatemplate', this)
+      .then(() => {
+        // Show success notification
+        showNotification(
+          'Success!',
+          'Your message has been sent successfully.',
+          'text-green-500',
+          'fa-check-circle'
+        );
+        contactForm.reset();
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        showNotification(
+          'Error!',
+          'Failed to send message. Please try again.',
+          'text-red-500',
+          'fa-exclamation-circle'
+        );
+      })
+      .finally(() => {
+        // Reset button state
+        btnText.textContent = 'Send Message';
+        submitBtn.disabled = false;
+        btnSpinner.classList.add('hidden');
+      });
+  });
+}
+```
+
+Langkah pengaturan EmailJS:
+1. Buat akun di `emailjs.com`.
+2. Tambahkan Email Service dan Template, catat `Service ID`, `Template ID`.
+3. Ambil `Public Key` dari dashboard.
+4. Masukkan nilai ke `assets/script.js` sesuai referensi di atas.
+5. Sesuaikan field form sesuai kebutuhan (nama `name` input sudah disiapkan di `index.html`).
 
 ## Deploy ke GitHub Pages
-1. Push project ke repository GitHub
-2. Masuk ke `Settings` → `Pages`
-3. Source: pilih `Branch: main` dan folder root
-4. Tunggu build selesai, situs Anda siap dibagikan
+1. Push project ke repository GitHub.
+2. `Settings` → `Pages`.
+3. Source: pilih `Branch: main` (root).
+4. Tunggu build; situs siap dibagikan.
+
+## Bantuan
+Jika Anda tidak paham cara setting, silakan hubungi:
+- Libra — Email: `youremail@gmail.com`, Telegram: `@yourhandle`.
 
 ## Lisensi
-Gunakan bebas untuk belajar dan membuat portofolio. Tambahkan berkas `LICENSE` jika ingin menetapkan lisensi khusus (mis. MIT).
-
-## Kredit
-- Tailwind CSS, Font Awesome, dan EmailJS
-- Desain dan implementasi oleh pemilik repository
-`
+Proyek ini menggunakan lisensi MIT. Lihat berkas `portfolio-modern/LICENSE` untuk detail.
