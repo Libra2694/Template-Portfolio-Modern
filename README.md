@@ -172,8 +172,7 @@ Distributed under MIT License. Lihat file `LICENSE` untuk informasi lebih lanjut
 ## 👨‍💻 Developer
 
 **Your Name** - *Fullstack Developer*
-- 🌐 Portfolio: [yourwebsite.com](https://yourwebsite.com)
-- 💼 LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- 🌐 Portfolio: [Libra](https://portfolio-alifaditya.wuaze.com/)
 - 🐙 GitHub: [@Libra2694](https://github.com/Libra2694)
 
 ---
