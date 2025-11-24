@@ -177,7 +177,7 @@ Distributed under MIT License. Lihat file `LICENSE` untuk informasi lebih lanjut
 
 ---
 
-<div align="center">
+<div>
 
 ### 🎯 Langkah Selanjutnya Setelah Download:
 
